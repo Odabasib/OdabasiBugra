@@ -1,0 +1,13 @@
+﻿CREATE TABLE [Gusto].[BPMCG_ReklamasyonStoklar] (
+  [ROWID] [int] IDENTITY,
+  [PPARENT] [int] NULL DEFAULT (0),
+  [pStok] [int] NULL DEFAULT (0),
+  [ldMiktar] [decimal](22, 6) NULL DEFAULT (0),
+  PRIMARY KEY CLUSTERED ([ROWID]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+GO
+
+ALTER TABLE [Gusto].[BPMCG_ReklamasyonStoklar]
+  ADD CONSTRAINT [BPMCG_ReklamasyonStoklarONDELETE] FOREIGN KEY ([PPARENT]) REFERENCES [Gusto].[BPMKT_CRM] ([ROWID]) ON DELETE CASCADE
+GO

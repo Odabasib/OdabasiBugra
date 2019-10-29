@@ -1,0 +1,12 @@
+﻿CREATE TABLE [Gusto].[OY_Connection] (
+  [OY_CONNECTION_ROWID] [int] IDENTITY,
+  [SADI] [varchar](255) NULL DEFAULT (''),
+  [SSERVER] [varchar](255) NULL DEFAULT (''),
+  [SDBNAME] [varchar](255) NULL DEFAULT (''),
+  [SDBUSER] [varchar](255) NULL DEFAULT (''),
+  [SPASSWORD] [varchar](255) NULL DEFAULT (''),
+  [NDBTYPE] [int] NULL DEFAULT (0),
+  PRIMARY KEY CLUSTERED ([OY_CONNECTION_ROWID]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+GO

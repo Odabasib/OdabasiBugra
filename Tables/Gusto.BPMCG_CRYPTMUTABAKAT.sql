@@ -1,0 +1,9 @@
+﻿CREATE TABLE [Gusto].[BPMCG_CRYPTMUTABAKAT] (
+  [ROWID] [int] IDENTITY,
+  [PPARENT] [int] NULL DEFAULT (0),
+  [sMail] [varchar](255) NULL DEFAULT (''),
+  [sMailCrypt] [varchar](255) NULL DEFAULT (''),
+  PRIMARY KEY CLUSTERED ([ROWID]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+GO

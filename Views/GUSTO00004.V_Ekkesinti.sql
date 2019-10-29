@@ -1,0 +1,4 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS OFF
+GO
+CREATE view [GUSTO00004].[V_Ekkesinti] as select nYil, sekkesintiadi, nAy,pek.pPersonel,pek.pIsYeri,pek.pIkramiyeTanimi, pek.ldBruttutar from GUSTO00004.PersonelEkGelirKesinti pek inner join GUSTO00004.EkKesintiTanimi ek on pek.pekGelirKesinti=ek.ekKesintiTanimi_rowid where pek.ntip=1 and baliyor=1 and  pek.ldBruttutar>0 union all select nYil, ek.sAd, nAy,pek.pPersonel,pek.pIsYeri,pek.pIkramiyeTanimi, pek.ldAvansTutari from GUSTO00004.PersonelAvans pek inner join GUSTO00004.PersonelAvansTanimlari ek on pek.pAvansTanimi=ek.PersonelAvansTanimlari_rowid where  pek.ldAvansTutari>0	
+GO

@@ -1,0 +1,3 @@
+﻿CREATE USER [GUSTO00005]
+  WITH PASSWORD = 'Type_Passw0rd_Here'
+GO

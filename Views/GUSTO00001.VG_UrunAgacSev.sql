@@ -1,0 +1,4 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS OFF
+GO
+Create View [GUSTO00001].[VG_UrunAgacSev] As  Select urunler.pstokkodu as urunkodu,  urunler.purunagacikodu, malzemeler.pstokkodu as malzemekodu, stokkodu.skod, stokkodu.sad,  stokkodu.stokkodu_rowid,  urunler.ldmiktarbirim1 as urunmiktari, malzemeler.ldKullanimMiktari1 as malzememiktari, stokdetay.sBirinciBirimAdi as birbirimadi  from (((GUSTO00001.urunler inner join GUSTO00001.malzemeler on urunler.purunagacikodu=malzemeler.purunagacikodu)inner join GUSTO00001.stokkodu on malzemeler.pstokkodu=stokkodu.stokkodu_rowid) inner join GUSTO00001.stokdetay on stokkodu.stokkodu_rowid=stokdetay.pstokkodu)
+GO

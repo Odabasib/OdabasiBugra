@@ -1,0 +1,10 @@
+﻿CREATE TABLE [Gusto].[OY_Kullanici] (
+  [OY_KULLANICI_ROWID] [int] IDENTITY,
+  [SADI] [varchar](255) NULL DEFAULT (''),
+  [SEPOSTA] [varchar](255) NULL DEFAULT (''),
+  [SGSM] [varchar](255) NULL DEFAULT (''),
+  [PGUSTO] [int] NULL DEFAULT (0),
+  PRIMARY KEY CLUSTERED ([OY_KULLANICI_ROWID]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+GO

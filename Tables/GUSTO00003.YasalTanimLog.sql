@@ -1,0 +1,31 @@
+﻿CREATE TABLE [GUSTO00003].[YasalTanimLog] (
+  [YasalTanimLog_rowid] [int] IDENTITY,
+  [sGrupAdi] [varchar](256) NULL DEFAULT (''),
+  [dtKontrolTarih] [smalldatetime] NULL,
+  [sKolonAdi1] [varchar](256) NULL DEFAULT (''),
+  [sKolonAdi2] [varchar](256) NULL DEFAULT (''),
+  [sKolonAdi3] [varchar](256) NULL DEFAULT (''),
+  [sKolonAdi4] [varchar](256) NULL DEFAULT (''),
+  [sKolonAdi5] [varchar](256) NULL DEFAULT (''),
+  [sDeger1] [varchar](256) NULL DEFAULT (''),
+  [sDeger2] [varchar](256) NULL DEFAULT (''),
+  [sDeger3] [varchar](256) NULL DEFAULT (''),
+  [sDeger4] [varchar](256) NULL DEFAULT (''),
+  [sDeger5] [varchar](256) NULL DEFAULT (''),
+  [sAciklama] [varchar](512) NULL DEFAULT (''),
+  [dtYayinBaslama] [smalldatetime] NULL,
+  [dtYayinBitis] [smalldatetime] NULL,
+  [dtTanimOlusturma] [smalldatetime] NULL,
+  [tmTanimOlusturma] [int] NULL DEFAULT (0),
+  [dtTanimDegistirme] [smalldatetime] NULL,
+  [tmTanimDegistirme] [int] NULL DEFAULT (0),
+  [pKullanici] [int] NULL DEFAULT (0),
+  [dtOlusturma] [smalldatetime] NULL,
+  [tmOlusturma] [int] NULL DEFAULT (0),
+  [dtDegistirme] [smalldatetime] NULL,
+  [tmDegistirme] [int] NULL DEFAULT (0),
+  [SubeKodu] [bigint] NULL DEFAULT (0),
+  PRIMARY KEY CLUSTERED ([YasalTanimLog_rowid]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+GO

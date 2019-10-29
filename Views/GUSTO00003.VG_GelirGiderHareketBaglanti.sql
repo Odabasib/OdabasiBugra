@@ -1,0 +1,4 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS OFF
+GO
+Create View [GUSTO00003].[VG_GelirGiderHareketBaglanti] As Select pIslemID, sBelgeSeri as seri, lBelgeNo as no from GUSTO00003.BankaHareket union select pIslemID, sSeri as seri, nBelgeNo as no from GUSTO00003.CariHareket  union select pIslemID, sSeri as seri, nBelgeNo as no from GUSTO00003.DigerHareket union select pIslemID, sBelgeSeri as seri, lBelgeNo as no from GUSTO00003.KasaHareket union select h.pIslemID, k.sSeri as seri, k.lSeriNo as no from GUSTO00003.verilencekkart k inner join GUSTO00003.verilencekhareket h on k.verilencekkart_rowid=h.pcek union select ah.pIslemID, ak.sSeri as seri, ak.lSeriNo as no from GUSTO00003.alinancekkart ak inner join GUSTO00003.alinancekhareket ah on ak.alinancekkart_rowid=ah.pcek
+GO

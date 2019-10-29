@@ -1,0 +1,18 @@
+﻿CREATE TABLE [Gusto].[BPMKT_KALITEHEDEFLERI] (
+  [ROWID] [int] IDENTITY,
+  [PKART] [int] NULL DEFAULT (0),
+  [sHedef] [varchar](255) NULL DEFAULT (''),
+  [sHedefBirimi] [varchar](255) NULL DEFAULT (''),
+  [sHedefTolerans] [varchar](255) NULL DEFAULT (''),
+  [cbIslem] [int] NULL DEFAULT (0),
+  [pDegiskenBir] [int] NULL DEFAULT (0),
+  [pDegiskenIki] [int] NULL DEFAULT (0),
+  [pBolum] [int] NULL DEFAULT (0),
+  PRIMARY KEY CLUSTERED ([ROWID]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+GO
+
+ALTER TABLE [Gusto].[BPMKT_KALITEHEDEFLERI]
+  ADD CONSTRAINT [BPMKT_KALITEHEDEFLERIONDELETE] FOREIGN KEY ([PKART]) REFERENCES [Gusto].[EPMKart] ([EPMKART_ROWID]) ON DELETE CASCADE
+GO

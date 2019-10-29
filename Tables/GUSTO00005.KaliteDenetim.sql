@@ -1,0 +1,38 @@
+﻿CREATE TABLE [GUSTO00005].[KaliteDenetim] (
+  [KaliteDenetim_rowid] [int] IDENTITY,
+  [sSeri] [varchar](60) NULL DEFAULT (''),
+  [lNo] [int] NULL DEFAULT (0),
+  [dtPlanTarihi] [smalldatetime] NULL,
+  [pBasGorevli] [int] NULL DEFAULT (0),
+  [pGorevli] [int] NULL DEFAULT (0),
+  [pBolum] [int] NULL DEFAULT (0),
+  [cDenetimTuru] [char](1) NULL DEFAULT (' '),
+  [cIlkDenetimDurumu] [char](1) NULL DEFAULT (' '),
+  [cIkinciDenetimDurumu] [char](1) NULL DEFAULT (' '),
+  [pAnket] [int] NULL DEFAULT (0),
+  [sZaman] [text] NULL DEFAULT (''),
+  [sIlkBulgular] [text] NULL DEFAULT (''),
+  [sIkinciBulgular] [text] NULL DEFAULT (''),
+  [dtIlkTetkik] [smalldatetime] NULL,
+  [dtIkinciTetkik] [smalldatetime] NULL,
+  [bTse] [bit] NULL DEFAULT (0),
+  [bElKitabi] [bit] NULL DEFAULT (0),
+  [bProsedur] [bit] NULL DEFAULT (0),
+  [bKontrol] [bit] NULL DEFAULT (0),
+  [bOnceki] [bit] NULL DEFAULT (0),
+  [sReferansNo] [varchar](20) NULL DEFAULT (''),
+  [cOnayDurumu] [char](1) NULL DEFAULT (' '),
+  [cOnayDurumuIlk] [char](1) NULL DEFAULT (' '),
+  [cOnayDurumuIkinci] [char](1) NULL DEFAULT (' '),
+  [pOlusturanKullanici] [int] NULL DEFAULT (0),
+  [dtOlusturma] [smalldatetime] NULL,
+  [tmOlusturma] [int] NULL DEFAULT (0),
+  [pDegistirenKullanici] [int] NULL DEFAULT (0),
+  [dtDegistirme] [smalldatetime] NULL,
+  [tmDegistirme] [int] NULL DEFAULT (0),
+  [SubeKodu] [bigint] NULL DEFAULT (0),
+  PRIMARY KEY CLUSTERED ([KaliteDenetim_rowid]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+TEXTIMAGE_ON [PRIMARY]
+GO

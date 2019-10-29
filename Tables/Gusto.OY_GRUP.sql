@@ -1,0 +1,9 @@
+﻿CREATE TABLE [Gusto].[OY_GRUP] (
+  [OY_GRUP_ROWID] [int] IDENTITY,
+  [SADI] [varchar](255) NULL DEFAULT (''),
+  [SEPOSTA] [varchar](255) NULL DEFAULT (''),
+  [SGSM] [varchar](255) NULL DEFAULT (''),
+  PRIMARY KEY CLUSTERED ([OY_GRUP_ROWID]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+GO

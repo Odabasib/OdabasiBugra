@@ -1,0 +1,51 @@
+﻿CREATE TABLE [GUSTO00004].[GelirGiderYeriKodu] (
+  [GelirGiderYeriKodu_rowid] [int] IDENTITY,
+  [sKod] [varchar](41) NULL DEFAULT (''),
+  [sAd] [varchar](60) NULL DEFAULT (''),
+  [pGelirGiderDetayi] [int] NULL DEFAULT (0),
+  [pUstKod] [int] NULL DEFAULT (0),
+  [nChildCount] [int] NULL DEFAULT (0),
+  [bPasifMi] [bit] NULL DEFAULT (0),
+  [pDoviz] [int] NULL DEFAULT (0),
+  [pOlusturanKullanici] [int] NULL DEFAULT (0),
+  [dtOlusturma] [smalldatetime] NULL,
+  [tmOlusturma] [int] NULL DEFAULT (0),
+  [pDegistirenKullanici] [int] NULL DEFAULT (0),
+  [dtDegistirme] [smalldatetime] NULL,
+  [tmDegistirme] [int] NULL DEFAULT (0),
+  [cGelirGiderSekli] [char](1) NULL DEFAULT (' '),
+  [SubeKodu] [bigint] NULL DEFAULT (0),
+  PRIMARY KEY CLUSTERED ([GelirGiderYeriKodu_rowid]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+GO
+
+CREATE INDEX [GGYGelirGiderKey]
+  ON [GUSTO00004].[GelirGiderYeriKodu] ([cGelirGiderSekli], [sKod])
+  WITH (FILLFACTOR = 90)
+  ON [PRIMARY]
+GO
+
+CREATE INDEX [GGYUstKodAdKey]
+  ON [GUSTO00004].[GelirGiderYeriKodu] ([pUstKod], [sAd])
+  WITH (FILLFACTOR = 90)
+  ON [PRIMARY]
+GO
+
+CREATE INDEX [GGYUstKodKey]
+  ON [GUSTO00004].[GelirGiderYeriKodu] ([pUstKod], [sKod])
+  WITH (FILLFACTOR = 90)
+  ON [PRIMARY]
+GO
+
+CREATE INDEX [sAd]
+  ON [GUSTO00004].[GelirGiderYeriKodu] ([sAd])
+  WITH (FILLFACTOR = 90)
+  ON [PRIMARY]
+GO
+
+CREATE INDEX [sKod]
+  ON [GUSTO00004].[GelirGiderYeriKodu] ([sKod])
+  WITH (FILLFACTOR = 90)
+  ON [PRIMARY]
+GO

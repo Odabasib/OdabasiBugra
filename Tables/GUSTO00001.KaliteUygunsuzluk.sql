@@ -1,0 +1,38 @@
+﻿CREATE TABLE [GUSTO00001].[KaliteUygunsuzluk] (
+  [KaliteUygunsuzluk_rowid] [int] IDENTITY,
+  [sSeri] [varchar](60) NULL DEFAULT (''),
+  [lNo] [int] NULL DEFAULT (0),
+  [dtTarih] [smalldatetime] NULL,
+  [pTespitPersonel] [int] NULL DEFAULT (0),
+  [pTespitBolum] [int] NULL DEFAULT (0),
+  [bCari] [bit] NULL DEFAULT (0),
+  [pCari] [int] NULL DEFAULT (0),
+  [bCariTuru] [bit] NULL DEFAULT (0),
+  [nCariYuzde] [smallint] NULL DEFAULT (0),
+  [cBirimTuru] [char](1) NULL DEFAULT (' '),
+  [pBirim] [int] NULL DEFAULT (0),
+  [bPersonel] [bit] NULL DEFAULT (0),
+  [nPersonelYuzde] [smallint] NULL DEFAULT (0),
+  [bDiger] [bit] NULL DEFAULT (0),
+  [nDigerYuzde] [smallint] NULL DEFAULT (0),
+  [sDigerKaynak] [varchar](30) NULL DEFAULT (''),
+  [pUygunsuzlukTanimi] [int] NULL DEFAULT (0),
+  [pUygunsuzlukTanimiMusteri] [int] NULL DEFAULT (0),
+  [cDurum] [char](1) NULL DEFAULT (' '),
+  [sReferansNo] [varchar](20) NULL DEFAULT (''),
+  [cOnayDurumu] [char](1) NULL DEFAULT (' '),
+  [sUygunsuzlukNeden] [text] NULL DEFAULT (''),
+  [sUygunsuzlukNot] [text] NULL DEFAULT (''),
+  [sUygunsuzlukAciklama] [text] NULL DEFAULT (''),
+  [pOlusturanKullanici] [int] NULL DEFAULT (0),
+  [dtOlusturma] [smalldatetime] NULL,
+  [tmOlusturma] [int] NULL DEFAULT (0),
+  [pDegistirenKullanici] [int] NULL DEFAULT (0),
+  [dtDegistirme] [smalldatetime] NULL,
+  [tmDegistirme] [int] NULL DEFAULT (0),
+  [SubeKodu] [bigint] NULL DEFAULT (0),
+  PRIMARY KEY CLUSTERED ([KaliteUygunsuzluk_rowid]) WITH (FILLFACTOR = 90)
+)
+ON [PRIMARY]
+TEXTIMAGE_ON [PRIMARY]
+GO

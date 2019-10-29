@@ -1,0 +1,2 @@
+﻿CREATE SCHEMA [Gusto] AUTHORIZATION [Gusto]
+GO
